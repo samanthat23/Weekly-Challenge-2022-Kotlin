@@ -19,19 +19,22 @@ package com.mouredev.weeklychallenge2022
  *
  */
 
-fun main() {
+#include <iostream>
+using namespace std;
 
-    for (index in 1..100) {
-        val divisibleByThree = index % 3 == 0
-        val divisibleByFive = index % 5 == 0
-        if (divisibleByThree && divisibleByFive) {
-            println("fizzbuzz")
-        } else if (divisibleByThree) {
-            println("fizz")
-        } else if (divisibleByFive) {
-            println("buzz")
-        } else {
-            println(index)
-        }
-    }
+int main() {
+	for (int i = 1; i <= 100; i++) {
+		if (i % 3 == 0) {
+			cout << "fizz" << endl;
+		}
+		else if (i % 5 == 0) {
+			cout << "buzz" << endl;
+		}
+		else if (i % 5 == 0 && i % 3 == 0) {
+			cout << " fizzbuzz " << endl;
+		}
+		else {
+			cout << i << endl;
+		}
+	}
 }
